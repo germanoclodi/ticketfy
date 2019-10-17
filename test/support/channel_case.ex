@@ -1,4 +1,4 @@
-defmodule TeacherWeb.ChannelCase do
+defmodule TicketSenderWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule TeacherWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint TeacherWeb.Endpoint
+      @endpoint TicketSenderWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Teacher.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TicketSender.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Teacher.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(TicketSender.Repo, {:shared, self()})
     end
     :ok
   end

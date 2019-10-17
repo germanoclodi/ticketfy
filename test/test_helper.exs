@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(Teacher.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(TicketSender.Repo, :manual)
 

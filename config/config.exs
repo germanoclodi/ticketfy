@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :teacher,
-  ecto_repos: [Teacher.Repo]
+config :ticket_sender,
+  ecto_repos: [TicketSender.Repo]
 
 # Configures the endpoint
-config :teacher, TeacherWeb.Endpoint,
+config :ticket_sender, TicketSenderWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "u7IJXShM3w1O1szOyJBzC3qZnZZoxlkwwEoXhSHIpeuUmyIqG91h9PA960/S3O1E",
-  render_errors: [view: TeacherWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Teacher.PubSub,
+  render_errors: [view: TicketSenderWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: TicketSender.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

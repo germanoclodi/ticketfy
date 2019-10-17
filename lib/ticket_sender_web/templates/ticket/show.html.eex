@@ -1,0 +1,33 @@
+<h2>Show ticket</h2>
+
+<ul>
+
+  <li>
+    <strong>Titulo:</strong>
+    <%= @ticket.titulo %>
+  </li>
+
+  <li>
+    <strong>Descricao:</strong>
+    <%= @ticket.descricao %>
+  </li>
+
+  <li>
+    <strong>Tipo:</strong>
+    <%= @ticket.tipo %>
+  </li>
+
+  <li>
+    <strong>Categoria:</strong>
+    <%= @ticket.categoria %>
+  </li>
+
+  <li>
+    <strong>E-mail:</strong>
+    <%= @ticket.email %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: ticket_path(@conn, :edit, @ticket) %></span>
+<span><%= link "Back", to: ticket_path(@conn, :index) %></span>

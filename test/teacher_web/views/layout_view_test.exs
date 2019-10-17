@@ -1,3 +1,3 @@
-defmodule TeacherWeb.LayoutViewTest do
-  use TeacherWeb.ConnCase, async: true
+defmodule TicketSenderWeb.LayoutViewTest do
+  use TicketSenderWeb.ConnCase, async: true
 end

@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :teacher, TeacherWeb.Endpoint,
+config :ticket_sender, TicketSenderWeb.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :teacher, TeacherWeb.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :teacher, Teacher.Repo,
+config :ticket_sender, TicketSender.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "teacher_test",
+  username: "lodi",
+  password: "lo0od1",
+  database: "ticket_db_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

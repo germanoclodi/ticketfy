@@ -1,4 +1,4 @@
-# Teacher
+# TicketSender
 
 To start your Phoenix server:
 

@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :teacher, TeacherWeb.Endpoint,
+config :ticket_sender, TicketSenderWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -31,13 +31,13 @@ config :teacher, TeacherWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :teacher, TeacherWeb.Endpoint,
+config :ticket_sender, TicketSenderWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/teacher_web/views/.*(ex)$},
-      ~r{lib/teacher_web/templates/.*(eex)$}
+      ~r{lib/ticket_sender_web/views/.*(ex)$},
+      ~r{lib/ticket_sender_web/templates/.*(eex)$}
     ]
   ]
 
@@ -49,10 +49,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :teacher, Teacher.Repo,
+config :ticket_sender, TicketSender.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "teacher_dev_user_auth",
+  username: "lodi",
+  password: "lo0od1",
+  database: "ticket_db",
   hostname: "localhost",
   pool_size: 10

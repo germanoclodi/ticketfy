@@ -1,0 +1,32 @@
+<%= if signed_in?(@conn) do %>
+  <h2>Listing tickets</h2>
+  <%= link "New ticket", to: ticket_path(@conn, :new) %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Descricao</th>
+        <th>Tipo</th>
+        <th>Categoria</th>
+
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+  <%= for ticket <- @tickets do %>
+      <tr>
+        <td><%= ticket.titulo %></td>
+        <td><%= ticket.descricao %></td>
+        <td><%= ticket.tipo %></td>
+        <td><%= ticket.categoria %></td>>
+
+        <td class="text-right">
+          <%= link "Show", to: ticket_path(@conn, :show, ticket), class: "btn btn-default btn-xs" %>
+          <%= link "Edit", to: ticket_path(@conn, :edit, ticket), class: "btn btn-default btn-xs" %>
+          <%= link "Delete", to: ticket_path(@conn, :delete, ticket), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+        </td>
+      </tr>
+  <% end %>
+    </tbody>
+  </table>
+<% end %>

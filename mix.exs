@@ -1,9 +1,9 @@
-defmodule Teacher.Mixfile do
+defmodule TicketSender.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :teacher,
+      app: :ticket_sender,
       version: "0.0.1",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -19,7 +19,7 @@ defmodule Teacher.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Teacher.Application, []},
+      mod: {TicketSender.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

@@ -1,10 +1,10 @@
-defmodule Teacher.AccountsTest do
-  use Teacher.DataCase
+defmodule TicketSender.AccountsTest do
+  use TicketSender.DataCase
 
-  alias Teacher.Accounts
+  alias TicketSender.Accounts
 
   describe "users" do
-    alias Teacher.Accounts.User
+    alias TicketSender.Accounts.User
 
     @valid_attrs %{encrypted_password: "some encrypted_password", username: "some username"}
     @update_attrs %{encrypted_password: "some updated encrypted_password", username: "some updated username"}

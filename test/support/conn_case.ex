@@ -1,4 +1,4 @@
-defmodule TeacherWeb.ConnCase do
+defmodule TicketSenderWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule TeacherWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import TeacherWeb.Router.Helpers
+      import TicketSenderWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint TeacherWeb.Endpoint
+      @endpoint TicketSenderWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Teacher.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TicketSender.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Teacher.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(TicketSender.Repo, {:shared, self()})
     end
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end

@@ -1,10 +1,10 @@
-defmodule Teacher.FeaturesTest do
-  use Teacher.DataCase
+defmodule TicketSender.FeaturesTest do
+  use TicketSender.DataCase
 
-  alias Teacher.Features
+  alias TicketSender.Features
 
-  describe "movies" do
-    alias Teacher.Features.Movie
+  describe "tickets" do
+    alias TicketSender.Features.Movie
 
     @valid_attrs %{genre: "some genre", summary: "some summary", title: "some title", year: 42}
     @update_attrs %{genre: "some updated genre", summary: "some updated summary", title: "some updated title", year: 43}

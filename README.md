@@ -2,19 +2,14 @@
 
 To start your Phoenix server:
 
+  * Make sure you have PostgreSQL installed in your machine or hosted in a Docker Instance
+  * Insert your admin Postgres credentials at the end of the file `config > dev.exs`
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser to access the WebApp.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+If you want to visit or provide acces to the API mode, use [`localhost:4000/api/tickets`](http://localhost:4000/api/tickets).
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+This was made for study and for fun using Elixir and Phoenix Framework.

@@ -14,7 +14,7 @@ defmodule TicketSenderWeb.UserController do
       {:ok, user} ->
         conn
         |> put_session(:current_user_id, user.id)
-        |> put_flash(:info, "Signed up successfully.")
+        |> put_flash(:info, "Você entrou com sucesso!")
         |> redirect(to: ticket_path(conn, :index))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

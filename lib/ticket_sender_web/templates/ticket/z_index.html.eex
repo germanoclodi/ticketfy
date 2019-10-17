@@ -24,7 +24,7 @@
       <td class="text-right">
         <span><%= link "Show", to: ticket_path(@conn, :show, ticket), class: "btn btn-default btn-xs" %></span>
         <span><%= link "Edit", to: ticket_path(@conn, :edit, ticket), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Delete", to: ticket_path(@conn, :delete, ticket), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+        <span><%= link "Delete", to: ticket_path(@conn, :delete, ticket), method: :delete, data: [confirm: "Você tem certeza que deseja remover este Ticket?"], class: "btn btn-danger btn-xs" %></span>
       </td>
     </tr>
 <% end %>

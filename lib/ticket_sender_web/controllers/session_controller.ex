@@ -12,11 +12,11 @@ defmodule TicketSenderWeb.SessionController do
       {:ok, user} ->
         conn
         |> put_session(:current_user_id, user.id)
-        |> put_flash(:info, "Signed in successfully.")
+        |> put_flash(:info, "Você entrou com sucesso!")
         |> redirect(to: ticket_path(conn, :index))
       {:error, _} ->
         conn
-        |> put_flash(:error, "There was a problem with your username/password")
+        |> put_flash(:error, "Houve algum problema com seu Login ou Senha!")
         |> render("new.html")
     end
   end
@@ -24,7 +24,7 @@ defmodule TicketSenderWeb.SessionController do
   def delete(conn, _params) do
     conn
     |> delete_session(:current_user_id)
-    |> put_flash(:info, "Signed out successfully.")
+    |> put_flash(:info, "Você saiu com sucesso!")
     |> redirect(to: ticket_path(conn, :index))
   end
 end

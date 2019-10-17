@@ -24,7 +24,7 @@
         <td class="text-center">
           <%= button "Detalhes", to: ticket_path(@conn, :show, ticket), style: "margin-right: 10px; margin-left: 10px", class: "btn btn-outline-success", method: :get %>
           <%= button "Editar", to: ticket_path(@conn, :edit, ticket), style: "margin-right: 10px; margin-left: 10px", class: "btn btn-outline-warning", method: :get %>
-          <%= button "Remover", to: ticket_path(@conn, :delete, ticket), style: "margin-right: 10px; margin-left: 10px", method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-outline-danger btn-xs" %>
+          <%= button "Remover", to: ticket_path(@conn, :delete, ticket), style: "margin-right: 10px; margin-left: 10px", method: :delete, data: [confirm: "Você tem certeza que deseja remover este Ticket?"], class: "btn btn-outline-danger btn-xs" %>
         </td>
       </tr>
   <% end %>

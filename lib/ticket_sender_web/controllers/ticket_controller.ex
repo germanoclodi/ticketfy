@@ -37,7 +37,7 @@ defmodule TicketSenderWeb.TicketController do
     case Features.create_ticket(ticket_params) do
       {:ok, ticket} ->
         conn
-        |> put_flash(:info, "Ticket created successfully.")
+        |> put_flash(:info, "Ticket criado com sucesso!")
         |> redirect(to: ticket_path(conn, :show, ticket))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
@@ -61,7 +61,7 @@ defmodule TicketSenderWeb.TicketController do
     case Features.update_ticket(ticket, ticket_params) do
       {:ok, ticket} ->ticket
         conn
-        |> put_flash(:info, "Ticket updated successfully.")
+        |> put_flash(:info, "Ticket atualizado com sucesso!")
         |> redirect(to: ticket_path(conn, :show, ticket))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", ticket: ticket, changeset: changeset)
@@ -73,7 +73,7 @@ defmodule TicketSenderWeb.TicketController do
     {:ok, _ticket} = Features.delete_ticket(ticket)
 
     conn
-    |> put_flash(:info, "Ticket deleted successfully.")
+    |> put_flash(:info, "Ticket removido com sucesso.")
     |> redirect(to: ticket_path(conn, :index))
   end
 end

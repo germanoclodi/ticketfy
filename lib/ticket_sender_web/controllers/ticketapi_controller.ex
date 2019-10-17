@@ -21,7 +21,7 @@ defmodule TicketSenderWeb.TicketApiController do
     case Features.update_ticket(ticket, ticket_params) do
       {:ok, ticket} ->
         conn
-        |> put_flash(:info, "Ticket updated successfully.")
+        |> put_flash(:info, "Ticket atualizado com sucesso!")
         |> redirect(to: ticket_path(conn, :show, ticket))
     end
   end

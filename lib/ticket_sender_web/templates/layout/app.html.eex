@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <title>Hello Teacher!</title>
+    <title>CRM – Criação de Tickets</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -25,11 +25,11 @@
       <main role="main">
         <%= button "Home", to: ticket_path(@conn, :index), method: :get, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
         <%= if signed_in?(@conn) do %>
-          <%= button "New ticket", to: ticket_path(@conn, :new), method: :get, class: "btn btn-outline-secondary", style: "margin-right: 10px" %>
-          <%= button "Sign out", to: session_path(@conn, :delete), method: :delete, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
+          <%= button "Novo Ticket", to: ticket_path(@conn, :new), method: :get, class: "btn btn-outline-secondary", style: "margin-right: 10px" %>
+          <%= button "Sair", to: session_path(@conn, :delete), method: :delete, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
         <% else %>
-          <%= button "Sign In", to: session_path(@conn, :new), method: :get, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
-          <%= button "Sign up", to: user_path(@conn, :new), method: :get, class: "btn btn-outline-secondary" %>
+          <%= button "Entrar", to: session_path(@conn, :new), method: :get, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
+          <%= button "Cadastrar", to: user_path(@conn, :new), method: :get, class: "btn btn-outline-secondary" %>
         <% end %>
         <%= render @view_module, @view_template, assigns %>
       </main>

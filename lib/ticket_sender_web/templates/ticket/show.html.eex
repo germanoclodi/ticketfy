@@ -10,6 +10,11 @@
   </li>
 
   <li class="list-group-item">
+    <strong>Status:</strong>
+    <%= @ticket.status %>
+  </li>
+
+  <li class="list-group-item">
     <strong>Descricao:</strong>
     <%= @ticket.descricao %>
   </li>
@@ -31,5 +36,5 @@
 
 </ul>
 </br>
-<%= button "Edit", to: ticket_path(@conn, :edit, @ticket), method: :get, class: "btn btn-outline-success", style: "margin-right: 10px" %>
-<%= link "Back", to: ticket_path(@conn, :index), method: :get, class: "btn btn-outline-secondary" %>
+<%= button "Editar", to: ticket_path(@conn, :edit, @ticket), method: :get, class: "btn btn-outline-success", style: "margin-right: 10px" %>
+<%= link "Voltar", to: ticket_path(@conn, :index), method: :get, class: "btn btn-outline-secondary" %>

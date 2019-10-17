@@ -1,6 +1,6 @@
 </br>
 </br>
-<h5>Sign in</h5>
+<h5>Entrar</h5>
 </br>
 <%= form_for @conn, session_path(@conn, :new), [as: :session], fn f -> %>
   

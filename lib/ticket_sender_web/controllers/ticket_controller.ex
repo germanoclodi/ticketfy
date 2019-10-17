@@ -32,6 +32,8 @@ defmodule TicketSenderWeb.TicketController do
   end
 
   def create(conn, %{"ticket" => ticket_params}) do
+    defaults = %{ "status" => "Aberto" }
+    ticket_params = Map.merge(defaults, ticket_params)
     case Features.create_ticket(ticket_params) do
       {:ok, ticket} ->
         conn

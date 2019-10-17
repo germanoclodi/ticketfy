@@ -4,4 +4,4 @@
 </br>
 <%= render "form.html", Map.put(assigns, :action, ticket_path(@conn, :create)) %>
 
-<%= button "Back", to: ticket_path(@conn, :index), method: "get", class: "btn btn-outline-secondary"%>
+<%= button "Voltar", to: ticket_path(@conn, :index), method: :get, class: "btn btn-outline-secondary"%>

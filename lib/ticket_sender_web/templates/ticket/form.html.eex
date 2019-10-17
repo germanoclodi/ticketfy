@@ -19,13 +19,13 @@
 
   <div class="form-group">
     <%= label f, :tipo, class: "control-label" %>
-    <%= select f, :tipo, ["Sugestão": "sugestao", "Elogio": "elogio", "Dúvida": "dúvida", "Reclamação": "reclamacao", "Bugs": "bugs", "Outros": "outros"], class: "form-control" %>
+    <%= select f, :tipo, ["Sugestão": "sugestao", "Elogio": "Elogio", "Dúvida": "Dúvida", "Reclamação": "Reclamação", "Bugs": "Bugs", "Outros": "Outros"], class: "form-control" %>
     <%= error_tag f, :tipo %>
   </div>
 
   <div class="form-group">
     <%= label f, :categoria, class: "control-label" %>
-    <%= select f, :categoria, ["Pagamentos": "pagamentos", "Vitrine": "vitrine", "Área do Usuário": "usuario", "Pós-venda": "posvenda", "Entrega": "entrega", "Outros": "outros"], class: "form-control" %>
+    <%= select f, :categoria, ["Pagamentos": "Pagamentos", "Produtos": "Produtos", "Área do Usuário": "Área do Usuário", "Pós-venda": "Pós-venda", "Entrega": "Entrega", "Outros": "Outros"], class: "form-control" %>
     <%= error_tag f, :categoria %>
   </div>
 
@@ -36,6 +36,6 @@
   </div>
 
   <div class="form-group">
-    <%= submit "Submit", class: "btn btn-outline-success" %>
+    <%= submit "Enviar", class: "btn btn-outline-success" %>
   </div>
 <% end %>

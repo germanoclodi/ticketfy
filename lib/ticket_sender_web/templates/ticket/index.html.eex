@@ -8,6 +8,7 @@
     <thead>
       <tr>
         <th class="text-center; vertical-align: middle">Titulo</th>
+        <th class="text-center; vertical-align: middle">Status</th>
         <th class="text-center; vertical-align: middle">Tipo</th>
         <th class="text-center; vertical-align: middle">Categoria</th>
         <th></th>
@@ -17,12 +18,13 @@
   <%= for ticket <- @tickets do %>
       <tr">
         <td class="text-center; vertical-align: middle"><%= ticket.titulo %></td>
+        <td class="text-center; vertical-align: middle"><%= ticket.status %></td>
         <td class="text-center; vertical-align: middle"><%= ticket.tipo %></td>
         <td class="text-center; vertical-align: middle"><%= ticket.categoria %></td>
         <td class="text-center">
-          <%= button "Show", to: ticket_path(@conn, :show, ticket), style: "margin-right: 10px; margin-left: 10px", class: "btn btn-outline-success", method: :get %>
-          <%= button "Edit", to: ticket_path(@conn, :edit, ticket), style: "margin-right: 10px; margin-left: 10px", class: "btn btn-outline-warning", method: :get %>
-          <%= button "Delete", to: ticket_path(@conn, :delete, ticket), style: "margin-right: 10px; margin-left: 10px", method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-outline-danger btn-xs" %>
+          <%= button "Detalhes", to: ticket_path(@conn, :show, ticket), style: "margin-right: 10px; margin-left: 10px", class: "btn btn-outline-success", method: :get %>
+          <%= button "Editar", to: ticket_path(@conn, :edit, ticket), style: "margin-right: 10px; margin-left: 10px", class: "btn btn-outline-warning", method: :get %>
+          <%= button "Remover", to: ticket_path(@conn, :delete, ticket), style: "margin-right: 10px; margin-left: 10px", method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-outline-danger btn-xs" %>
         </td>
       </tr>
   <% end %>

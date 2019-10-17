@@ -8,6 +8,7 @@ defmodule TicketSender.Repo.Migrations.CreateTickets do
       add :tipo, :string
       add :categoria, :string
       add :email, :string
+      add :status, :string
 
       timestamps()
     end

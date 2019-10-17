@@ -1,5 +1,7 @@
-<h2>New ticket</h2>
-
+</br>
+</br>
+<h5>New ticket</h5>
+</br>
 <%= render "form.html", Map.put(assigns, :action, ticket_path(@conn, :create)) %>
 
-<span><%= link "Back", to: ticket_path(@conn, :index) %></span>
+<%= button "Back", to: ticket_path(@conn, :index), method: "get", class: "btn btn-outline-secondary"%>

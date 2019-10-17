@@ -13,29 +13,29 @@
 
   <div class="form-group">
     <%= label f, :descricao, class: "control-label" %>
-    <%= textarea f, :descricao, class: "form-control" %>
+    <%= textarea f, :descricao, class: "form-control", rows: "4" %>
     <%= error_tag f, :descricao %>
   </div>
 
   <div class="form-group">
     <%= label f, :tipo, class: "control-label" %>
-    <%= number_input f, :tipo, class: "form-control" %>
+    <%= select f, :tipo, ["Sugestão": "sugestao", "Elogio": "elogio", "Dúvida": "dúvida", "Reclamação": "reclamacao", "Bugs": "bugs", "Outros": "outros"], class: "form-control" %>
     <%= error_tag f, :tipo %>
   </div>
 
   <div class="form-group">
     <%= label f, :categoria, class: "control-label" %>
-    <%= text_input f, :categoria, class: "form-control" %>
+    <%= select f, :categoria, ["Pagamentos": "pagamentos", "Vitrine": "vitrine", "Área do Usuário": "usuario", "Pós-venda": "posvenda", "Entrega": "entrega", "Outros": "outros"], class: "form-control" %>
     <%= error_tag f, :categoria %>
   </div>
 
   <div class="form-group">
     <%= label f, :email, class: "control-label" %>
-    <%= text_input f, :email, class: "form-control" %>
+    <%= email_input f, :email, class: "form-control" %>
     <%= error_tag f, :email %>
   </div>
 
   <div class="form-group">
-    <%= submit "Submit", class: "btn btn-primary" %>
+    <%= submit "Submit", class: "btn btn-outline-success" %>
   </div>
 <% end %>

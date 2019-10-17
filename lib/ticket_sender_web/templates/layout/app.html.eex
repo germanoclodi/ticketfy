@@ -17,23 +17,23 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 5%">
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
       <main role="main">
-        <%= link "Home", to: ticket_path(@conn, :index) %> |
+        <%= button "Home", to: ticket_path(@conn, :index), method: :get, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
         <%= if signed_in?(@conn) do %>
-          <%= link "Sign out", to: session_path(@conn, :delete), method: :delete %>
+          <%= button "New ticket", to: ticket_path(@conn, :new), method: :get, class: "btn btn-outline-secondary", style: "margin-right: 10px" %>
+          <%= button "Sign out", to: session_path(@conn, :delete), method: :delete, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
         <% else %>
-          <%= link "Sign In", to: session_path(@conn, :new) %>
-          |
-          <%= link "Sign up", to: user_path(@conn, :new) %>
+          <%= button "Sign In", to: session_path(@conn, :new), method: :get, style: "margin-right: 10px", class: "btn btn-outline-secondary" %>
+          <%= button "Sign up", to: user_path(@conn, :new), method: :get, class: "btn btn-outline-secondary" %>
         <% end %>
         <%= render @view_module, @view_template, assigns %>
       </main>
-
+    
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>

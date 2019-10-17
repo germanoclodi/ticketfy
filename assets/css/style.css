@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #222E4D;
+  background: #40062a;
   font-size: 14px;
   line-height: 22px;
   overflow-x: hidden;
@@ -30,7 +30,8 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	margin: auto;
+  margin: auto;
+  border-radius: 17px;
 }
 
 hr {
@@ -72,17 +73,6 @@ span.help-block {
 .flash-notice {
   padding: 7px;
   background: #D9EDF7;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-table, th, td {
-  text-align: left;
-  padding: 10px;
-  border: 1px solid black;
 }
 
 .nav-header {

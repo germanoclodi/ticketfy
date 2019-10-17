@@ -1,2 +1,5 @@
-<h2>Sign up</h2>
+</br>
+</br>
+<h5>Sign up</h5>
+</br>
 <%= render "form.html", Map.put(assigns, :action, user_path(@conn, :create)) %>

@@ -49,7 +49,7 @@ defmodule TicketSenderWeb.TicketController do
 
   def edit(conn, %{"id" => id}) do
     ticket = Features.get_ticket!(id)
-    changeset = Features.change_tivket(ticket)
+    changeset = Features.change_ticket(ticket)
     render(conn, "edit.html", ticket: ticket, changeset: changeset)
   end
 

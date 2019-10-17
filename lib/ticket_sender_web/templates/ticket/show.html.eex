@@ -1,33 +1,35 @@
-<h2>Show ticket</h2>
+</br>
+</br>
+<h5>Show ticket</h5>
+</br>
+<ul class="list-group">
 
-<ul>
-
-  <li>
+  <li class="list-group-item">
     <strong>Titulo:</strong>
     <%= @ticket.titulo %>
   </li>
 
-  <li>
+  <li class="list-group-item">
     <strong>Descricao:</strong>
     <%= @ticket.descricao %>
   </li>
 
-  <li>
+  <li class="list-group-item">
     <strong>Tipo:</strong>
     <%= @ticket.tipo %>
   </li>
 
-  <li>
+  <li class="list-group-item"> 
     <strong>Categoria:</strong>
     <%= @ticket.categoria %>
   </li>
 
-  <li>
+  <li class="list-group-item"> 
     <strong>E-mail:</strong>
     <%= @ticket.email %>
   </li>
 
 </ul>
-
-<span><%= link "Edit", to: ticket_path(@conn, :edit, @ticket) %></span>
-<span><%= link "Back", to: ticket_path(@conn, :index) %></span>
+</br>
+<%= button "Edit", to: ticket_path(@conn, :edit, @ticket), method: :get, class: "btn btn-outline-success", style: "margin-right: 10px" %>
+<%= link "Back", to: ticket_path(@conn, :index), method: :get, class: "btn btn-outline-secondary" %>

@@ -19,7 +19,7 @@
 
   <div class="form-group">
     <%= label f, :tipo, class: "control-label" %>
-    <%= select f, :tipo, ["Sugestão": "sugestao", "Elogio": "Elogio", "Dúvida": "Dúvida", "Reclamação": "Reclamação", "Bugs": "Bugs", "Outros": "Outros"], class: "form-control" %>
+    <%= select f, :tipo, ["Sugestão": "Sugestão", "Elogio": "Elogio", "Dúvida": "Dúvida", "Reclamação": "Reclamação", "Bugs": "Bugs", "Outros": "Outros"], class: "form-control" %>
     <%= error_tag f, :tipo %>
   </div>
 

@@ -21,6 +21,11 @@ defmodule TicketSender.Features do
     Repo.all(Ticket)
   end
 
+  def list_user_tickets(user_id) do
+    query = from(t in Ticket, where: t.userid == ^user_id)
+    Repo.all(query)
+  end
+
   @doc """
   Gets a single movie.
 

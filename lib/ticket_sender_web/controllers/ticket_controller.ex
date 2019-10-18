@@ -22,7 +22,8 @@ defmodule TicketSenderWeb.TicketController do
   end
 
   def index(conn, _params) do
-    tickets = Features.list_tickets()
+    user_id = get_session(conn, :current_user_id)
+    tickets = Features.list_user_tickets(user_id || 0)
     render(conn, "index.html", tickets: tickets)
   end
 
@@ -32,7 +33,8 @@ defmodule TicketSenderWeb.TicketController do
   end
 
   def create(conn, %{"ticket" => ticket_params}) do
-    defaults = %{ "status" => "Aberto" }
+    user_id = get_session(conn, :current_user_id)
+    defaults = %{ "status" => "Aberto", "userid" => user_id }
     ticket_params = Map.merge(defaults, ticket_params)
     case Features.create_ticket(ticket_params) do
       {:ok, ticket} ->

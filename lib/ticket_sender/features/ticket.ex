@@ -11,6 +11,7 @@ defmodule TicketSender.Features.Ticket do
     field :categoria, :string
     field :email, :string
     field :status, :string
+    field :userid, :integer
 
     timestamps()
   end
@@ -18,7 +19,7 @@ defmodule TicketSender.Features.Ticket do
   @doc false
   def changeset(%Ticket{} = ticket, attrs) do
     ticket
-    |> cast(attrs, [:descricao, :titulo, :tipo, :categoria, :email, :status])
+    |> cast(attrs, [:descricao, :titulo, :tipo, :categoria, :email, :status, :userid])
     |> validate_required([:descricao, :titulo, :tipo, :categoria, :email])
   end
 end

@@ -16,7 +16,8 @@ defmodule TicketSenderWeb.TicketApiView do
       descricao: ticket.descricao,
       tipo: ticket.tipo,
       categoria: ticket.categoria,
-      email: ticket.email}
+      email: ticket.email,
+      userid: ticket.userid}
   end
 
 end

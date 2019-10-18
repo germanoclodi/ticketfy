@@ -1,1 +1,1 @@
-web: MIX_ENV=prod mix deps.update postgrex && mix ecto.migrate && mix phx.server
+web: MIX_ENV=prod mix local.rebar --force && mix deps.update postgrex && mix ecto.migrate && mix phx.server

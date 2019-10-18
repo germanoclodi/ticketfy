@@ -1,5 +1,5 @@
 defmodule TicketSender.Repo do
-  use Ecto.Repo, otp_app: :ticket_sender_web
+  use Ecto.Repo, otp_app: :ticket_sender
 
   @doc """
   Dynamically loads the repository url from the

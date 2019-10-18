@@ -11,7 +11,8 @@ defmodule TicketSenderWeb.TicketApiView do
   end
 
   def render("ticket.json", %{ticket: ticket}) do
-    %{titulo: ticket.titulo,
+    %{id: ticket.id,
+      titulo: ticket.titulo,
       status: ticket.status,
       descricao: ticket.descricao,
       tipo: ticket.tipo,

@@ -1,6 +1,6 @@
 </br>
 </br>
-<h5>Edit ticket</h5>
+<h5>Editar ticket</h5>
 </br>
 
 <%= render "form.html", Map.put(assigns, :action, ticket_path(@conn, :update, @ticket)) %>

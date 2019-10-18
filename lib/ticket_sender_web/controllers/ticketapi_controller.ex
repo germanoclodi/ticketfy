@@ -18,11 +18,8 @@ defmodule TicketSenderWeb.TicketApiController do
   def update(conn, %{"id" => id, "ticket" => ticket_params}) do
     ticket = Features.get_ticket!(id)
 
-    case Features.update_ticket(ticket, ticket_params) do
-      {:ok, ticket} ->
-        conn
-        |> put_flash(:info, "Ticket atualizado com sucesso!")
-        |> redirect(to: ticket_path(conn, :show, ticket))
+    with {:ok, %Ticket{} = ticket} <- Features.update_ticket(ticket, ticket_params) do
+      render(conn, "show.json", ticket: ticket)
     end
   end
 

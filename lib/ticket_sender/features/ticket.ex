@@ -5,12 +5,13 @@ defmodule TicketSender.Features.Ticket do
 
 
   schema "tickets" do
+    field :ticketid, :integer
     field :descricao, :string
     field :titulo, :string
-    field :tipo, :string
-    field :categoria, :string
+    field :tipoid, :integer
+    field :categoriaid, :integer
     field :email, :string
-    field :status, :string
+    field :statusid, :integer
     field :userid, :integer
 
     timestamps()
@@ -19,7 +20,7 @@ defmodule TicketSender.Features.Ticket do
   @doc false
   def changeset(%Ticket{} = ticket, attrs) do
     ticket
-    |> cast(attrs, [:descricao, :titulo, :tipo, :categoria, :email, :status, :userid])
-    |> validate_required([:descricao, :titulo, :tipo, :categoria, :email])
+    |> cast(attrs, [:descricao, :titulo, :tipoid, :categoriaid, :email, :statusid, :userid])
+    |> validate_required([:descricao, :titulo, :tipoid, :categoriaid, :email])
   end
 end

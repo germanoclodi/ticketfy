@@ -18,12 +18,12 @@ defmodule TicketSender.Features do
 
   """
   def list_tickets do
-    Repo.all(Ticket)
+    Repo.all(Ticket).include(categoria, tipo, status)
   end
 
   def list_user_tickets(user_id) do
     query = from(t in Ticket, where: t.userid == ^user_id)
-    Repo.all(query)
+    Repo.all(query).include(categoria, tipo, status)
   end
 
   @doc """
